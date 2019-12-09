@@ -33,23 +33,39 @@ public class LoginTests {
 	@BeforeMethod
 	public void setUp() throws Exception {
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
-		loginPOM = new LoginPOM(driver); 
+		loginPOM = new LoginPOM(driver);
 		baseUrl = properties.getProperty("baseURL");
-		screenShot = new ScreenShot(driver); 
-		// open the browser 
+		screenShot = new ScreenShot(driver);
+		// open the browser
 		driver.get(baseUrl);
 	}
-	
+
 	@AfterMethod
 	public void tearDown() throws Exception {
 		Thread.sleep(1000);
 		driver.quit();
 	}
+
 	@Test
-	public void validLoginTest() {
-		loginPOM.sendUserName("admin");
-		loginPOM.sendPassword("admin@123");
-		loginPOM.clickLoginBtn(); 
-		screenShot.captureScreenShot("First");
+	public void validLoginRegister() {
+		loginPOM.clickLoginBtn();
+		loginPOM.clickRegister();
+		loginPOM.Firstname("Reva");
+		loginPOM.Lastname("Sharma");
+		loginPOM.Email("revasharma@gmail.com");
+		loginPOM.Telephone("9345677833");
+		loginPOM.Address1("Jayanagar");
+		loginPOM.Address2("Bangalore");
+		loginPOM.City("Bangalore");
+		loginPOM.Postcode("560018");
+		loginPOM.Country("India");
+		loginPOM.RegionState("Karnataka");
+		loginPOM.Password("reva123");
+		loginPOM.ConfirmPassword("reva123");
+		loginPOM.SubscribeNo();
+		loginPOM.AcceptTerms();
+		loginPOM.Continue();
+
 	}
+
 }
