@@ -12,15 +12,15 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.training.generics.ScreenShot;
-import com.training.pom.SignupPOM;
+import com.training.pom.UserDetailsPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
-public class eLearningSignUp_TC087 {
+public class eLearningUserDetails_TC085 {
 
 	private WebDriver driver;
 	private String baseUrl;
-	private SignupPOM SignupPOM;
+	private UserDetailsPOM UserDetailsPOM;
 	private static Properties properties;
 	//private ScreenShot screenShot;
 
@@ -34,7 +34,7 @@ public class eLearningSignUp_TC087 {
 	@BeforeMethod	//identifying browser to chose
 	public void setUp() throws Exception {
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
-		SignupPOM = new SignupPOM(driver);
+		UserDetailsPOM = new UserDetailsPOM(driver);
 		baseUrl = properties.getProperty("baseURL");
 		//screenShot = new ScreenShot(driver);
 		// open the browser
@@ -48,19 +48,27 @@ public class eLearningSignUp_TC087 {
 	}
 
 	@Test
-	public void eLearningSignup() throws InterruptedException {
-		SignupPOM.SignUpBtn();
-		SignupPOM.Firstname("Ishi");
-		SignupPOM.Lastname("Sri");
-		SignupPOM.Email("ishisri@gmail.com");
-		SignupPOM.Username("Ishi_Sri");
-		SignupPOM.Password("Welcome123");
-		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-		SignupPOM.ConfirmPassword("Welcome123");
-		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-		SignupPOM.Phone("987654321");
-		//SignupPOM.Language("English");
-		SignupPOM.Register();
-		Thread.sleep(2000);
+	public void AddNewUser() throws InterruptedException {
+		
+		UserDetailsPOM.Username("admin");
+		UserDetailsPOM.Password("admin@123");
+		UserDetailsPOM.Login();
+		UserDetailsPOM.AddUser();
+		UserDetailsPOM.Firstname("Ishi");
+		UserDetailsPOM.Lastname("Sri2");
+		UserDetailsPOM.Email("ishisri2@gmail.com");
+		UserDetailsPOM.PhoneNumber("9876543210");
+		UserDetailsPOM.LoginUsername("ishisri2");
+		UserDetailsPOM.EnterPasswordRadio();
+		UserDetailsPOM.AddNewUserPassword("Welcome123");
+		UserDetailsPOM.ProfileDropDown();
+		UserDetailsPOM.TrainerOption();
+		UserDetailsPOM.Add();
+		UserDetailsPOM.AdministrationBtn();
+		UserDetailsPOM.AddUsersToCourse();
+		UserDetailsPOM.UserListOption(); 
+		UserDetailsPOM.CourselistOption();
+		UserDetailsPOM.AddtotheCoursesbtn();
+		 
 	}
 }

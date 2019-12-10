@@ -2,28 +2,28 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-12-08T23:04:33 EST" name="Default suite" finished-at="2019-12-08T23:04:53 EST" duration-ms="20247">
+  <suite started-at="2019-12-09T21:33:10 EST" name="Default suite" finished-at="2019-12-09T21:33:31 EST" duration-ms="20792">
     <groups>
     </groups>
-    <test started-at="2019-12-08T23:04:33 EST" name="Default test" finished-at="2019-12-08T23:04:53 EST" duration-ms="20247">
-      <class name="com.training.sanity.tests.eLearningSignUp">
-        <test-method is-config="true" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.eLearningSignUp@5bfa9431]" started-at="2019-12-08T23:04:33 EST" name="setUpBeforeClass" finished-at="2019-12-08T23:04:33 EST" duration-ms="12" status="PASS">
+    <test started-at="2019-12-09T21:33:10 EST" name="Default test" finished-at="2019-12-09T21:33:31 EST" duration-ms="20792">
+      <class name="com.training.sanity.tests.eLearningUserDetails_TC085">
+        <test-method is-config="true" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.eLearningUserDetails_TC085@5bfa9431]" started-at="2019-12-09T21:33:10 EST" name="setUpBeforeClass" finished-at="2019-12-09T21:33:10 EST" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.training.sanity.tests.eLearningSignUp@5bfa9431]" started-at="2019-12-08T23:04:33 EST" name="setUp" finished-at="2019-12-08T23:04:40 EST" duration-ms="6938" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.training.sanity.tests.eLearningUserDetails_TC085@5bfa9431]" started-at="2019-12-09T21:33:10 EST" name="setUp" finished-at="2019-12-09T21:33:17 EST" duration-ms="6796" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="eLearningSignup()[pri:0, instance:com.training.sanity.tests.eLearningSignUp@5bfa9431]" started-at="2019-12-08T23:04:40 EST" name="eLearningSignup" finished-at="2019-12-08T23:04:50 EST" duration-ms="10401" status="PASS">
+        <test-method signature="AddNewUser()[pri:0, instance:com.training.sanity.tests.eLearningUserDetails_TC085@5bfa9431]" started-at="2019-12-09T21:33:17 EST" name="AddNewUser" finished-at="2019-12-09T21:33:27 EST" duration-ms="10523" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- eLearningSignup -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.training.sanity.tests.eLearningSignUp@5bfa9431]" started-at="2019-12-08T23:04:50 EST" name="tearDown" finished-at="2019-12-08T23:04:53 EST" duration-ms="2856" status="PASS">
+        </test-method> <!-- AddNewUser -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.training.sanity.tests.eLearningUserDetails_TC085@5bfa9431]" started-at="2019-12-09T21:33:27 EST" name="tearDown" finished-at="2019-12-09T21:33:31 EST" duration-ms="3409" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.training.sanity.tests.eLearningSignUp -->
+      </class> <!-- com.training.sanity.tests.eLearningUserDetails_TC085 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
